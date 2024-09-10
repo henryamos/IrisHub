@@ -299,3 +299,10 @@ input:focus{
 .fa-heart{
   color: red;
 }
+.fa-solid{
+  background-color: #001;
+  color: rgb(15, 255, 2);
+  padding: 0.6rem;
+  border-radius: .5rem;
+  
+}
