@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assests/css/styles.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+
     <title>Iris Hub</title>
 </head>
 <body>
@@ -30,10 +33,12 @@
             <button class="hero-btn">Join Us</button>
         </div>
     </section>
-    <section class="features">
-        <div class="feature-item">
+    <section data-aos="fade-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine"class="features">
+        <div data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="feature-item">
             <span class="feature-title"><i class="fa-solid fa-brain"></i> Innovate</span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, impedit!</p>
+            <p>Lorem ipsum dolor sit amet.</p>
             <ul class="feature-list">
                 <li>
                     <span>&#10003;</span>
@@ -51,11 +56,12 @@
             </ul>
         </div>
         <!-- Second Div -->
-         <div class="feature-item">
+         <div data-aos="fade-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="feature-item">
             
             <span class="feature-title">
                 <i class="fa-solid fa-paintbrush"></i>Creativity</span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, impedit!</p>
+            <p>Lorem ipsum dolor sit amet.</p>
             <ul class="feature-list">
                 <li>
                     <span>&#10003;</span>
@@ -72,9 +78,10 @@
                
             </ul>
         </div>
-        <div class="feature-item">    
+        <div data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="feature-item">    
             <span class="feature-title"><i class="fa-solid fa-handshake-angle"></i>Mentorship</span>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, impedit!</p>
+            <p>Lorem ipsum dolor sit amet.</p>
             <ul class="feature-list">
                 <li>
                     <span>&#10003;</span>
@@ -95,14 +102,15 @@
         
     </section>
     <section class="works">
-        <div class="work-header">
+        <div data-aos="fade-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine" class="work-header">
             <h2>Our Works</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, et?</p>
         </div>
         <div class="gallery">
             <!-- Gallery 1 -->
             <div class="gallery-item">
-                <img src="https://res.cloudinary.com/dml4ofntq/image/upload/v1725983433/pic7_t7jdwp.jpg" alt="Gallery Image">
+                <img  src="https://res.cloudinary.com/dml4ofntq/image/upload/v1725983433/pic7_t7jdwp.jpg" alt="Gallery Image">
                 <div class="gallery-overlay">
                     <span>Web Design</span>
                     <p>Learn to how to build website</p>
@@ -210,4 +218,10 @@
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="./assests/js/script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
 </html>

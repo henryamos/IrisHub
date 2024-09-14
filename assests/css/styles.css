@@ -450,6 +450,10 @@ nav {
 .feature-title {
   font-weight: bold;
   font-size: 1.4rem;
+  width: 50%;
+}
+.feature-item p{
+  width: 50%;
 }
 
 /* Responsive Gallery Section */
@@ -482,7 +486,7 @@ nav {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  padding: 20px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -549,17 +553,3 @@ nav {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* Animations
-.animate {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.6s ease-in-out;
-}
-
-.feature-item,
-.gallery-item,
-.footer-title {
-  opacity: 0;
-  transform: translateY(50px);
-} */
