@@ -6,6 +6,7 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 /* Nav Bar */
 nav {
@@ -296,13 +297,260 @@ input:focus{
   text-align: center;
 
 }
-.fa-heart{
-  color: red;
-}
 .fa-solid{
   background-color: #001;
   color: rgb(15, 255, 2);
   padding: 0.6rem;
-  border-radius: .5rem;
-  
+  border-radius: .5rem; 
 }
+
+
+
+/* Responsive Navigation Bar */
+
+/* Nav Bar Styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 10;
+  padding: 0 20px;
+}
+
+.nav-sub {
+  color: rgba(47, 255, 0, 0.854);
+}
+
+.navItems {
+  display: flex;
+  column-gap: 20px;
+}
+
+.navItems a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navItems a:hover {
+  padding: 0 10px;
+  color: rgba(47, 255, 0, 0.854);
+}
+
+/* Mobile Menu Toggle Button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle-bar {
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navItems {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .navItems.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .navItems a {
+    padding: 10px 0;
+  }
+}
+/* Responsive Hero Section */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+    url("https://res.cloudinary.com/dml4ofntq/image/upload/v1725983409/pic4_icqrtf.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.hero-subText {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-btn {
+  background-color: rgba(47, 255, 0, 0.854);
+  padding: 0.8rem 2rem;
+  border: none;
+  color: black;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+
+/* Responsive Features Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 6rem 1rem;
+  padding: 0 1rem;
+  align-items: center;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Responsive Gallery Section */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: 1rem;
+}
+
+/* Responsive Footer Section */
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-about,
+.footer-features,
+.footer-social,
+.footer-subscribe {
+  width: 100%;
+}
+
+
+/* Media Queries for Smaller Devices */
+@media (min-width: 768px) {
+  .navItems {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    width: auto;
+  }
+
+  .navItems.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 5rem;
+  }
+
+  .feature-item {
+    max-width: 250px;
+    text-align: left;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Animations
+.animate {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.feature-item,
+.gallery-item,
+.footer-title {
+  opacity: 0;
+  transform: translateY(50px);
+} */
