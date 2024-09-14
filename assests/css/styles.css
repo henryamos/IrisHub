@@ -406,12 +406,13 @@ nav {
   padding: 0 20px;
 }
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 500;
 }
 
 .hero-subText {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  text-wrap: wrap;
   margin-top: 10px;
 }
 
@@ -441,8 +442,9 @@ nav {
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   text-align: center;
+  align-items: center;
 }
 
 .feature-title {
@@ -452,12 +454,12 @@ nav {
 
 /* Responsive Gallery Section */
 .gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  width: 100%;
-  gap: 20px;
-  padding: 1rem;
-}
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 40px;
+    padding: 3rem;
+  }
 
 .gallery-item {
   width: 100%;
@@ -472,6 +474,7 @@ nav {
   flex-direction: column;
   padding: 20px;
   align-items: center;
+  /* justify-content: center; */
 }
 
 .footer-top {
@@ -486,8 +489,13 @@ nav {
 .footer-about,
 .footer-features,
 .footer-social,
-.footer-subscribe {
+.footer-subscribe  {
   width: 100%;
+  align-items: center
+}
+.footer-subscribe .search {    
+    justify-content: center;
+
 }
 
 
@@ -531,6 +539,7 @@ nav {
   .footer-top {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding: 40px 20px;
   }
 }
